@@ -1,0 +1,8 @@
+.env
+__pycache__/
+*.pyc
+kb/
+kb_v2/
+kb_v3/
+papers/
+data/corpus/

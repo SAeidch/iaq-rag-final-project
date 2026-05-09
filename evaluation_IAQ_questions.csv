@@ -1,0 +1,11 @@
+question,topic,question_type,notes
+How does ventilation rate influence indoor CO2 concentration?,ventilation_co2,broad_synthesis,Should retrieve ventilation and CO2 papers
+What are the limitations of CO2 based ventilation design?,ventilation_co2,focused_technical,Should retrieve papers discussing exposure estimation and design limits
+How does sensor placement affect CO2 based demand controlled ventilation?,sensor_placement,focused_technical,Should retrieve sensor position and DCV performance studies
+How is CFD used to study indoor airborne contaminant transport?,cfd_contaminant,broad_synthesis,Should retrieve CFD airflow and contaminant transport studies
+How does occupant movement affect indoor air quality?,occupant_movement,broad_synthesis,Should retrieve movement induced airflow and contaminant spread studies
+What factors influence airborne transmission in indoor ventilated spaces?,covid_airborne,broad_synthesis,Should retrieve indoor airborne transmission and ventilation papers
+How do non uniform CO2 distributions affect indoor environmental assessment?,ventilation_co2,focused_technical,Should retrieve papers on stratification and breathing zone concentration
+What role does sensor location play in representing breathing zone CO2 concentration?,sensor_placement,focused_technical,Should retrieve breathing zone and sensor arrangement studies
+How are green walls discussed in relation to indoor air quality improvement?,green_wall,broad_synthesis,Should retrieve green wall or phytoremediation papers
+What are the advantages and limitations of CFD for indoor environment analysis?,cfd_contaminant,broad_synthesis,Should retrieve CFD review or method papers

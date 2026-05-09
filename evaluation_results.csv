@@ -1,0 +1,21 @@
+question_id,question,method,retrieval_relevance_1to5,groundedness_1to5,completeness_1to5,clarity_1to5,notes
+q01,What are the limitations of CO2 based ventilation design?,RAG,4,4,4,5,Specific and technically relevant; grounded in retrieved passages; citation style still basic
+q01,What are the limitations of CO2 based ventilation design?,Baseline,NA,2,2,4,Mostly answers a different question; generic and not evidence grounded
+q02,How is CFD used to study indoor airborne contaminant transport?,RAG,4,4,4,4,Good domain-specific answer; mostly grounded; retrieval includes some noisy text
+q02,How is CFD used to study indoor airborne contaminant transport?,Baseline,NA,3,4,5,Clear and broadly correct but generic; not tied to corpus evidence
+q03,What factors influence airborne transmission in indoor ventilated spaces?,RAG,4,4,4,4,Mostly grounded and relevant; answer reflects retrieved COVID and ventilation literature; some points remain broad
+q03,What factors influence airborne transmission in indoor ventilated spaces?,Baseline,NA,3,4,5,Clear and generally correct but generic; not tied to corpus evidence
+q04,How does occupant movement affect indoor air quality?,RAG,4,4,4,4,Relevant retrieved passages on movement induced airflow and contaminant spread; mostly grounded and domain specific
+q04,How does occupant movement affect indoor air quality?,Baseline,NA,3,4,5,Clear and generally plausible but more generic and less tied to literature evidence
+q05,What are the limitations of CO2 based ventilation design?,RAG,4,4,4,4,Specific and literature-aligned answer; grounded in retrieved passages; some retrieved chunks still mixed in strength
+q05,What are the limitations of CO2 based ventilation design?,Baseline,NA,3,4,5,Clear and plausible but more generic; not tied to corpus evidence
+q06,How does sensor placement affect CO2 based demand controlled ventilation?,RAG,5,5,4,5,Very strong retrieval and answer alignment; specific discussion of mixing vs displacement ventilation and breathing-height placement
+q06,How does sensor placement affect CO2 based demand controlled ventilation?,Baseline,NA,3,4,5,Clear and plausible but generic; not tied to corpus evidence and less specific than RAG
+q07,What role does sensor location play in representing breathing zone CO2 concentration?,RAG,5,5,4,5,Very strong retrieval and answer alignment; specific discussion of breathing-height placement, exhaust overestimation, and displacement ventilation effects
+q07,What role does sensor location play in representing breathing zone CO2 concentration?,Baseline,NA,3,4,5,Clear and plausible but generic; not tied to corpus evidence and less specific than RAG
+q08,How do non uniform CO2 distributions affect indoor environmental assessment?,RAG,4,4,4,4,Mostly grounded and relevant; focuses well on breathing zone representation and sensor arrangement, though retrieval includes some weaker/noisier chunks
+q08,How do non uniform CO2 distributions affect indoor environmental assessment?,Baseline,NA,3,4,5,Clear and plausible but generic; broader than corpus-specific evidence and less tied to retrieved literature
+q09,How are green walls discussed in relation to indoor air quality improvement?,RAG,4,4,4,4,Relevant retrieval and mostly grounded answer; good emphasis on pollutant reduction and CO2 drawdown, though still somewhat broad
+q09,How are green walls discussed in relation to indoor air quality improvement?,Baseline,NA,3,4,5,Clear and plausible but generic; not tied to corpus evidence and less specific than RAG
+q10,What are the advantages and limitations of CFD for indoor environment analysis?,RAG,3,4,4,4,Answer is mostly grounded and relevant, but retrieval is somewhat mixed and one top chunk appears off-topic
+q10,What are the advantages and limitations of CFD for indoor environment analysis?,Baseline,NA,3,5,5,Clear and comprehensive but generic; not tied to corpus evidence
