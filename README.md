@@ -28,13 +28,8 @@ The final system was evaluated on ten manually selected technical questions and 
 ├── evaluation_IAQ_questions.csv
 ├── evaluation_results.csv
 ├── README.md
-├── papers/
-├── data/
-│   └── corpus/
-├── outputs/
-│   ├── rag/
-│   └── baseline/
-└── kb_v3/
+├── rag/
+└── baseline/
 ```
 
 ## Main Files
@@ -172,7 +167,9 @@ The scoring rubric included:
 
 ## Summary of Results
 
-The final RAG system generally outperformed the prompt only baseline in groundedness and domain specificity. The strongest results were observed for focused technical questions, especially:
+The final RAG system generally outperformed the prompt only baseline in groundedness and domain specificity. Across the ten evaluation questions, the RAG system achieved average scores of 4.1/5 for retrieval relevance, 4.2/5 for groundedness, 4.0/5 for completeness, and 4.3/5 for clarity, while the prompt only baseline remained clearer overall but less grounded in the paper corpus.
+
+The strongest results were observed for focused technical questions, especially:
 
 * sensor placement in CO2 based demand controlled ventilation
 * breathing zone CO2 concentration
@@ -190,7 +187,7 @@ The implemented workflow is:
 → **OpenAI embeddings + BM25 indexing**
 → **ChromaDB vector store**
 → **hybrid retrieval of top passages**
-→ **prompt with retrieved evidence**
+→ **user query + top retrieved passages**
 → **grounded answer generation with `gpt-4o-mini`**
 → **final answer shown to user**
 
@@ -200,15 +197,12 @@ This project is a proof of concept rather than a production ready literature ass
 
 * the corpus includes multiple related subtopics, so some broad queries retrieve mixed evidence
 * PDF extraction still introduces some formatting artifacts
-* the final citations are passage based rather than full paper and page citations
+* the current answer citations are passage based rather than full document and page citations
 
-## GitHub Link
+## GitHub Repository
 
-Add your public repository link here after upload:
+https://github.com/SAeidch/iaq-rag-final-project
 
-```text
-[Insert GitHub repository link here]
-```
 
 ## Author
 
