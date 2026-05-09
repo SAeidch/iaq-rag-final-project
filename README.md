@@ -3,7 +3,7 @@
 
 ## Project Overview
 
-This project implements a domain specific retrieval augmented generation system for indoor air quality, ventilation, carbon dioxide, and computational fluid dynamics literature. The goal is to answer technical questions over a curated paper corpus with responses that are grounded in retrieved evidence rather than generated from model knowledge alone.
+This repository contains the final project for CSC 7644: Applied LLM Development. This project implements a domain specific retrieval augmented generation system for indoor air quality, ventilation, carbon dioxide, and computational fluid dynamics literature. The goal is to answer technical questions over a curated paper corpus with responses that are grounded in retrieved evidence rather than generated from model knowledge alone.
 
 The system includes:
 
@@ -17,6 +17,26 @@ The system includes:
 * prompt only baseline generation for comparison
 
 The final system was evaluated on ten manually selected technical questions and compared against a baseline without retrieval.
+
+## Key Features
+
+- Answers technical questions over a curated IAQ and CFD literature corpus using RAG
+- Supports PDF to text preprocessing for local document ingestion
+- Combines BM25 lexical retrieval with ChromaDB vector retrieval through hybrid fusion
+- Generates grounded answers using retrieved passages rather than prompt-only generation
+- Provides a prompt-only baseline for comparison
+- Includes a manual evaluation workflow over ten technical questions
+
+## Tech Stack and Architecture
+
+The system was implemented in Python and uses the OpenAI API for embeddings and grounded answer generation. The main retrieval components are BM25 for lexical search and ChromaDB for vector search. PDF preprocessing is handled with `pypdf`, and the final answer generation step uses `gpt-4o-mini`.
+
+At a high level, the pipeline consists of:
+- a preprocessing stage that converts PDFs to text
+- a retrieval stage that chunks, embeds, and indexes the corpus
+- a hybrid search stage that combines lexical and vector retrieval
+- an answer generation stage that uses the retrieved passages as evidence
+- a prompt-only baseline script used for comparison
 
 ## Repository Structure
 
@@ -131,6 +151,7 @@ To generate a RAG answer:
 ```bash
 python Chahardoli_Saeid_csc7644_final.py answer --query "What are the limitations of CO2 based ventilation design?" --retriever hybrid --top_k 5 --db_path ./kb_v3 --collection iaq_docs_v3
 ```
+**Note:** Some local development folders such as `papers/`, `data/corpus/`, and `kb_v3/` were used during preprocessing and indexing but are not fully included in the public repository.
 
 ## Prompt Only Baseline
 
@@ -198,6 +219,12 @@ This project is a proof of concept rather than a production ready literature ass
 * the corpus includes multiple related subtopics, so some broad queries retrieve mixed evidence
 * PDF extraction still introduces some formatting artifacts
 * the current answer citations are passage based rather than full document and page citations
+
+## Attributions and Citations
+
+The overall RAG pipeline was developed from the course project workflow and adapted for this final project. No external repository code was copied directly into this project. The implementation was informed by official documentation for the OpenAI API, ChromaDB, BM25, and `pypdf`.
+
+If any code is later adapted from external sources, those sources should be cited here and in code comments where appropriate.
 
 ## GitHub Repository
 
