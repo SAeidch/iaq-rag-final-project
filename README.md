@@ -228,8 +228,7 @@ If any code is later adapted from external sources, those sources should be cite
 
 ## GitHub Repository
 
-https://github.com/SAeidch/iaq-rag-final-project
-
+https://github.com/SAeidch/CSC7644-iaq-rag-final-project_Chahardoli
 
 ## Author
 
